@@ -1,0 +1,81 @@
+//q1
+
+#include <stdio.h>
+
+int main() {
+  
+    int items = 5;
+    float tax_rate = 0.07;
+    char currency_symbol = '$';
+    double subtotal = 23.45;
+
+    
+    double total = subtotal + (subtotal * tax_rate);
+
+   
+    printf("Number of items: %d\n", items);
+    printf("Tax rate: %.2f\n", tax_rate);
+    printf("Subtotal: %c%.2lf\n", currency_symbol, subtotal);
+    printf("Total: %c%.2lf\n", currency_symbol, total);
+
+    return 0;
+}
+
+//q2
+
+#include <stdio.h>
+
+int main() {
+    
+    int age = 25;
+    float height = 1.75;
+    char initial = 'R';
+    double weight = 65.5;
+    long long phone_number = 9876543210;
+    short zip_code = 12345;
+    unsigned int num_pets = 2;
+    signed int income_expense_diff = -500;
+
+    
+    printf("The age of the person is %d years\n", age);
+    printf("The height of the person is %.2f meters\n", height);
+    printf("The initial of the person's name is %c\n", initial);
+    printf("The weight of the person is %.1lf kilograms\n", weight);
+    printf("The phone number of the person is %lld\n", phone_number);
+    printf("The zip code of the person's address is %hd\n", zip_code);
+    printf("The number of pets owned by the person is %u\n", num_pets);
+    printf("The difference between income and expenses of the person is $%d\n", income_expense_diff);
+
+    return 0;
+}
+
+//q3
+
+#include <stdio.h>
+
+int main() {
+    int number, reversed = 0, remainder;
+    
+    printf("Enter a five-digit number: ");
+    scanf("%d", &number);
+
+    int originalNumber = number; //store the original number for later comparison
+
+    while (number != 0) {
+        remainder = number % 10;
+        reversed = reversed * 10 + remainder;
+        number /= 10;
+    }
+
+    printf("Reversed number is %d\n", reversed);
+
+    if (originalNumber == reversed) {
+        printf("The original and reversed numbers are equal.\n");
+    } else {
+        printf("The original and reversed numbers are not equal.\n");
+    }
+
+    return 0;
+}
+
+
