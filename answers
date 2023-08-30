@@ -78,4 +78,81 @@ int main() {
     return 0;
 }
 
+//Q4
+
+#include <stdio.h>
+
+int main() {
+    int angle1, angle2, angle3, sum;
+    
+    printf("Enter the first angle: ");
+    scanf("%d", &angle1);
+    printf("Enter the second angle: ");
+    scanf("%d", &angle2);
+    printf("Enter the third angle: ");
+    scanf("%d", &angle3);
+    
+    sum = angle1 + angle2 + angle3;
+    
+    if (sum == 180 && angle1 != 0 && angle2 != 0 && angle3 != 0) {
+        printf("The triangle is valid\n");
+    } else {
+        printf("The triangle is invalid\n");
+    }
+    
+    return 0;
+}
+
+//Q5
+#include <stdio.h>
+
+int main() {
+   char ch;
+   printf("Enter a character: ");
+   scanf("%c", &ch);
+
+   if (ch >= 'a' && ch <= 'z') {
+      printf("Lowercase character.\n");
+   } else if (ch >= 'A' && ch <= 'Z') {
+      printf("Uppercase character.\n");
+   } else {
+      printf("Non-alphabetic character.\n");
+   }
+
+   switch (ch) {
+      case 'a':
+      case 'e':
+      case 'i':
+      case 'o':
+      case 'u':
+      case 'A':
+      case 'E':
+      case 'I':
+      case 'O':
+      case 'U':
+         printf("Vowel.\n");
+         break;
+      default:
+         printf("Consonant.\n");
+         break;
+   }
+
+   return 0;
+}
+
+//Q6
+
+#include<stdio.h>
+
+int main()
+{
+    int small_side=2;
+    int large_side=(3*small_side);
+    int perimeter=(3*large_side);
+    printf("The Perimeter of large triangle is : %d \n",perimeter);
+  
+
+    return 0;
+}
+
 
